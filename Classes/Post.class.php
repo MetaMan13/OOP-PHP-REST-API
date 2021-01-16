@@ -116,7 +116,8 @@
                     $stmt = $this->database_connection->prepare("SELECT * FROM posts LIMIT :number_of_posts");
                     $stmt->execute(['number_of_posts' => $number_of_posts]);
                     $jsonData = $stmt->fetchAll();
-                    echo json_encode($jsonData);
+                    $jsonData = json_encode($jsonData);
+                    echo $jsonData;
                 }catch (Exception $e){
                     echo "Exeption: " . $e->getMessage();
                     exit();
