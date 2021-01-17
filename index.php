@@ -6,13 +6,18 @@
 
     try{
         $test = new Post();
-        // $test->createPost(2, "Inserted with PDO", "Create me",3);
+
+        // POST
+
+        // PUT
         // $test->updatePostCategory(18,3);
         // $test->updatePostTitle(10,"Updated with strict types");
         // $test->updatePostBody(10,"Changed with strict types");
-        // $test->getAllPosts();
-        $test->getPosts(3);
+
+        // DELETE
         // $test->deleteSinglePost(4);
+        unset($test);
+        exit();
     }catch (Exception $e){
         echo "Exeption: " . $e->getMessage();
     }
